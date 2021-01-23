@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "urbit-console"
+version = "0.0.1"
+description = "A console frontend for Urbit ships"
+authors = ["~tablyx-risleb <tablyx-risleb@offworld.network>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+asks = "^2.4.12"
+trio = "^0.18.0"
+urwid = "^2.1.2"
+attrs = "^20.3.0"
+click = "^7.1.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+urbit-console = 'urbit_console.chat:sync_main'
+url-test = 'urbit_console.url_test:main'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
